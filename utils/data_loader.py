@@ -84,6 +84,73 @@ class DataLoader:
             return pd.DataFrame
         
         except Exception as e:
-            
+            logger.error(f"Error loading sales: {str(e)}")
+            return pd.DataFrame
+        
+
+    def load_documents(self) -> str:
+        """
+         Load SOP documentation.
+        
+        Returns:
+            Document content as string, or empty string if file missing
+        
+        """
+
+        docs_path = self.data_dir/ "docs" / "sop.md"
+
+        try: 
+            with open(docs_path, 'r', encoding='utf-8'):
+                content = f.read()
+
+            logger.info(f"Loaded SOP document from {docs_path}")
+            return content
+        
+        except FileNotFoundError:
+            logger.error(f"File not found in {docs_path}")
+            return ""
+
+        except Exception as e:
+            logger.error(f"An exeption occured: {str(e)}")
+
+            return ""
+
+    def load_all(self) -> Tuple[pd.DataFrame, pd.DataFrame, str]:
+        """
+        Load all data sources.
+        
+        Returns:
+            Tuple of (tasks_df, sales_df, sop_content)
+        """
+        tasks = self.load_tasks()
+        sales = self.load_sales()
+        docs = self.load_documents()
+        
+        return tasks, sales, docs
+    
+
+def get_current_data() -> pd.Timestamp:
+    """
+    Get current date for business logic.
+    In production, this would use datetime.now()
+    For testing, we use a fixed date matching the data.
+    
+    Returns:
+        Current date as pandas Timestamp
+    """
+    # Fixed date for testing (matching README current date)
+    return pd.Timestamp('2026-01-20')
 
 
+if __name__ == "__main__":
+    # Test data loading
+    loader = DataLoader()
+    tasks_df, sales_df, sop = loader.load_all()
+    
+    print(f"\nTasks loaded: {len(tasks_df)} rows")
+    print(f"Sales loaded: {len(sales_df)} rows")
+    print(f"SOP loaded: {len(sop)} characters")
+    
+    print("\nTask columns:", tasks_df.columns.tolist())
+    print("Sales columns:", sales_df.columns.tolist())
+    

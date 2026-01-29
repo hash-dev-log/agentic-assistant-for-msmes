@@ -1,0 +1,16 @@
+lead_id,client,stage,value,created_date
+L001,Acme Corp,Proposal Sent,45000,2026-01-05
+L002,Beta Industries,Negotiation,32000,2026-01-08
+L003,Gamma LLC,Closed Won,28000,2026-01-03
+L004,Delta Consulting,Discovery,15000,2026-01-12
+L005,Epsilon Partners,Proposal Sent,52000,2026-01-06
+L006,Zeta Corp,Initial Contact,8000,2026-01-15
+L007,Acme Corp,Negotiation,67000,2025-12-28
+L008,Beta Industries,Closed Won,41000,2026-01-10
+L009,Theta Enterprises,Discovery,,2026-01-14
+L010,Gamma LLC,Proposal Sent,19000,2026-01-11
+L011,Delta Consulting,Closed Lost,0,2026-01-09
+L012,Epsilon Partners,Negotiation,73000,2026-01-02
+L013,Zeta Corp,Initial Contact,12000,2026-01-16
+L014,,Proposal Sent,25000,2026-01-13
+L015,Acme Corp,Discovery,31000,2026-01-17

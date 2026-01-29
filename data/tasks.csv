@@ -1,0 +1,16 @@
+task_id,client,owner,status,due_date,last_followup
+T001,Acme Corp,John Smith,In Progress,2026-01-15,2026-01-10
+T002,Beta Industries,Sarah Lee,Pending,2026-01-22,2026-01-18
+T003,Gamma LLC,John Smith,Completed,2026-01-10,2026-01-09
+T004,Delta Consulting,Mike Chen,Overdue,2026-01-12,2025-12-20
+T005,Acme Corp,Sarah Lee,In Progress,2026-01-25,
+T006,Epsilon Partners,John Smith,Pending,2026-01-18,2026-01-15
+T007,Beta Industries,,In Progress,2026-01-20,2026-01-19
+T008,Gamma LLC,Mike Chen,Overdue,2026-01-08,2026-01-05
+T009,Acme Corp,Sarah Lee,Pending,2026-01-28,2026-01-20
+T010,Zeta Corp,John Smith,In Progress,,2026-01-17
+T011,Delta Consulting,Mike Chen,Pending,2026-01-21,2026-01-19
+T012,Epsilon Partners,Sarah Lee,Overdue,2026-01-14,2026-01-10
+T013,Beta Industries,John Smith,In Progress,2026-01-23,
+T014,Gamma LLC,Mike Chen,Completed,2026-01-16,2026-01-16
+T015,Acme Corp,Sarah Lee,Pending,2026-01-19,2026-01-18
